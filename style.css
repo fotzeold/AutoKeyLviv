@@ -53,6 +53,7 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 100;
+	background: #dfe2e6;
 }
 
 header li.row {
@@ -148,6 +149,9 @@ header li img {
 }
 
 @media all and (max-width: 1024px) {
+	header {
+		padding: 8px 0;
+	}
 	.header__mobile-nav {
 		display: flex;
 	}
@@ -186,6 +190,10 @@ header li img {
 .hero__wrapper {
 	padding: 120px 0 60px 0;
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
 }
 
 .hero h1 {
@@ -309,15 +317,11 @@ header li img {
 
 @media all and (max-width: 768px) {
 	.hero__wrapper {
-		padding: 50px 0 0 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		padding: 10px 0 0 0;
 		align-items: center;
-		gap: 15px;
 	}
 	.hero {
-		background: url("./src/img/Hero.png") bottom right / auto 38% no-repeat;
+		background: url("./src/img/Hero.png") bottom right -30px / auto 38% no-repeat;
 	}
 	.hero h1 {
 		text-align: center;
@@ -377,4 +381,11 @@ header li img {
 	.hero ul {
 		margin: 0;
 	}
+}
+
+/* services */
+
+.services {
+	padding: 60px 0;
+	background: white;
 }
