@@ -7,7 +7,7 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-padding-top: 120px;
+	scroll-padding-top: 50px;
 }
 body {
 	background: #dfe2e6;
@@ -54,6 +54,13 @@ header {
 	width: 100%;
 	z-index: 100;
 	background: #dfe2e6;
+	transition: background 0.3s ease;
+}
+
+header.scrolled {
+	background: white;
+	border-bottom: 1px solid rgb(230, 230, 230);
+	box-shadow: 1px 1px 4px rgb(240, 240, 240);
 }
 
 header li.row {
@@ -389,6 +396,130 @@ header li img {
 /* services */
 
 .services {
-	padding: 60px 0;
+	padding: 100px 0;
 	background: white;
+}
+
+.services h2 {
+	font-size: 38px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.services__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 30px;
+}
+
+.services__card {
+	padding: 40px 15px;
+	box-shadow: 1px 1px 4px rgb(206, 206, 206);
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	border-radius: 5px;
+	width: calc(33% - 20px);
+}
+
+.services__card-image {
+	width: 90px;
+	height: 90px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 1px 1px 8px rgb(176, 176, 176);
+	border-radius: 50%;
+}
+
+.services__card-image img {
+	width: 62px;
+	height: 62px;
+	object-fit: contain;
+}
+
+.services__card figure {
+	display: block;
+	height: 40px;
+	width: 1px;
+	background: gray;
+}
+
+.services__card p {
+	font-size: 20px;
+}
+
+@media all and (max-width: 1024px) {
+	.services__list {
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.services__card {
+		width: calc(50% - 10px);
+	}
+}
+
+@media all and (max-width: 768px) {
+	.services__card {
+		width: 100%;
+		padding: 25px 15px;
+	}
+
+	.services {
+		padding: 60px 0;
+	}
+
+	.services h2 {
+		font-size: 28px;
+	}
+
+	.services__card p {
+		font-size: 18px;
+	}
+}
+
+/* Portfolio */
+
+.portfolio {
+	padding: 0 0 100px 0;
+	background: white;
+}
+
+.portfolio h2 {
+	font-size: 38px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.portfolio .swiper img {
+	display: block;
+	margin: 0 auto;
+	height: 380px;
+	width: 290px;
+	border-radius: 5px;
+}
+
+.portfolio .swiper-wrapper {
+	padding-bottom: 40px;
+}
+
+.swiper-pagination-bullet-active {
+	background: #db0000;
+}
+
+@media all and (max-width: 768px) {
+	.portfolio h2 {
+		font-size: 28px;
+	}
+}
+
+@media all and (max-width: 460px) {
+	.portfolio .swiper img {
+		width: 90%;
+		object-fit: cover;
+		height: 410px;
+	}
 }

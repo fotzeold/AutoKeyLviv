@@ -35,3 +35,14 @@ function closeMenu() {
 }
 
 AOS.init();
+
+
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+	if (window.scrollY > 80) { // Проверяем, прокрутил ли пользователь страницу
+		header.classList.add('scrolled'); // Добавляем класс "scrolled"
+	} else {
+		header.classList.remove('scrolled'); // Убираем класс, если вернулись наверх
+	}
+});
