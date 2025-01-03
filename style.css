@@ -549,8 +549,8 @@ footer {
 
 .fixed__contacts img {
 	border-radius: 50%;
-	width: 42px;
-	height: 42px;
+	width: 48px;
+	height: 48px;
 }
 
 @media all and (max-width: 768px) {
